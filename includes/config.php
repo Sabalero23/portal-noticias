@@ -14,7 +14,7 @@ define('TIMEZONE', 'America/Argentina/Buenos_Aires');
 // Configuración de la base de datos
 define('DB_HOST', 'localhost');
 define('DB_USER', 'noticias');
-define('DB_PASS', 'cxKKiACpnYFcSETP');
+define('DB_PASS', 'clave');
 define('DB_NAME', 'noticias');
 define('DB_CHARSET', 'utf8mb4');
 
