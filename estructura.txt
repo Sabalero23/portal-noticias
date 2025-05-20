@@ -1,0 +1,204 @@
+portal-noticias/
+├── index.php                      # Página principal con listado de noticias
+├── news.php                       # Página de detalle de noticia individual
+├── category.php                   # Página para mostrar noticias por categoría
+├── tag.php                        # Página para mostrar noticias por etiqueta
+├── search.php                     # Página de resultados de búsqueda
+├── contact.php                    # Página de contacto
+├── about.php                      # Página de "Quiénes somos"
+├── ad_click.php                   # Script contador de click en publicidad
+├── check_subscribe.php
+├── composer.json
+├── confirm_account.php
+├── confirm_subscription.php
+├── forgot_password.php
+├── login.php
+├── logout.php
+├── manifest.json
+├── offline.php
+├── profile.php
+├── register.php
+├── reset_password.php
+├── subscribe.php
+├── switch_theme.php
+├── unsubscribe.php
+├── weather_api.php
+├── privacy.php                    # Política de privacidad
+├── terms.php                      # Términos y condiciones
+├── subscribe.php                  # Procesador de suscripciones al newsletter
+├── poll_vote.php                  # Procesador de votos en encuestas
+├── process_comment.php            # Procesador de comentarios
+├── database.sql                   # Estructura de la base de datos
+├── README.md                      # Documentación del proyecto
+│
+├── assets/                        # Recursos estáticos (CSS, JS, imágenes)
+│   ├── js/
+│   │   ├── scripts.js             # JavaScript principal
+│   │   ├── admin.js               # JavaScript para el admin
+│   │   ├── media.js
+│   │   ├── pwa-install.js
+│   │   ├── sidebar.js
+│   │   └── weather.js
+│   │
+│   ├── img/               # Logo del sitio
+│   │   ├── favicon.ico            # Favicon
+│   │   ├── placeholder.jpg        # Imagen de placeholder
+│   │   ├── ads/                   # Imágenes de publicidad
+│   │   │   ├── ad1.jpg
+│   │   │   ├── ad2.jpg
+│   │   │   └── ...
+│   │   │
+│   │   ├── news/                  # Imágenes de noticias
+│   │   │   ├── news1.jpg
+│   │   │   ├── news2.jpg
+│   │   │   └── ...
+│   │   │
+│   │   ├── authors/               # Avatares de autores
+│   │   │   ├── author1.jpg
+│   │   │   ├── author2.jpg
+│   │   │   └── ...
+│   │   │
+│   │   ├── avatars/               # Avatares de usuarios para comentarios
+│   │   │   ├── avatar1.jpg
+│   │   │   ├── avatar2.jpg
+│   │   │   └── ...
+│   │   │
+│   │   └── uploads/               # Directorio para archivos subidos
+│   │       ├── 2025/
+│   │       │   ├── 05/
+│   │       │   └── 06/
+│   │       └── temp/
+│   ├── themes/
+│   │   ├── dark/
+│   │   │   ├── responsive.css
+│   │   │   ├── screenshot.jpg
+│   │   │   ├── simgle-news.css
+│   │   │   ├── styles.css
+│   │   │   └── theme.json
+│   │   ├── default/
+│   │   │   ├── responsive.css
+│   │   │   ├── screenshot.jpg
+│   │   │   ├── single-news.css
+│   │   │   ├── styles.css
+│   │   │   └── theme.json
+│   │   ├── deports/
+│   │   │   ├── responsive.css
+│   │   │   ├── screenshot.jpg
+│   │   │   ├── styles.css
+│   │   │   └──theme.json
+│   │   ├── minimalist/
+│   │   │   ├── responsive.css
+│   │   │   ├── screenshot.jpg
+│   │   │   ├── styles.css
+│   │   │   └── theme.json
+│   │   ├── modern/
+│   │   │   ├── responsive.css
+│   │   │   ├── screenshot.jpg
+│   │   │   ├── styles.css
+│   │   │   └── theme.json
+│   │   └── technology/
+│   │       ├── digital-grid.svg
+│   │       ├── responsive.css
+│   │       ├── screenshot.jpg
+│   │       ├── styles.css
+│   │       ├── tech-pattern.svg
+│   │       └── theme.json
+│   │
+├── includes/                      # Archivos incluidos en múltiples páginas
+│   ├── header.php                 # Encabezado del sitio
+│   ├── footer.php                 # Pie de página
+│   ├── functions.php              # Funciones generales
+│   ├── db_connection.php          # Conexión a base de datos
+│   ├── breadcrumbs.php            # Migas de pan para navegación
+│   ├── related_news.php           # Noticias relacionadas
+│   ├── popular_posts.php          # Noticias populares
+│   ├── social_share.php           # Botones para compartir
+│   ├── weather_api.php            # API para clima
+│   ├── search_form.php            # Formulario de búsqueda
+│   ├── newsletter_form.php        # Formulario de newsletter
+│   ├── config.php                 # Configuración general
+│   ├── mailer.php
+│   ├── newsletter_form.php
+│   ├── search_form.php
+│   └── auth.php                   # Funciones de autenticación
+│
+├── admin/                         # Panel de administración
+│   ├── index.php                  # Login y dashboard
+│   ├── dashboard.php              # Panel principal
+│   ├── logout.php                 # Cierre de sesion
+│   ├── tutorial.php               # Tutorial completo del sistema
+│   ├── profile.php                # Perfil de usuario
+│   │
+│   ├── news/                      # Gestión de noticias
+│   │   ├── index.php              # Listado de noticias
+│   │   ├── add.php                # Añadir noticia
+│   │   ├── edit.php               # Editar noticia
+│   │   └── delete.php             # Eliminar noticia
+│   │
+│   ├── categories/                # Gestión de categorías
+│   │   ├── index.php              # Listado de categorías
+│   │   ├── add.php                # Añadir categoría
+│   │   ├── edit.php               # Editar categoría
+│   │   └── delete.php             # Eliminar categoría
+│   │
+│   ├── comments/                  # Gestión de comentarios
+│   │   ├── index.php              # Listado de comentarios
+│   │   ├── edit.php               # Editar comentario
+│   │   ├── bulk_action.php               # Editar comentario
+│   │   ├── approve.php            # Aprobar comentario
+│   │   └── delete.php             # Eliminar comentario
+│   │
+│   ├── users/                     # Gestión de usuarios
+│   │   ├── index.php              # Listado de usuarios
+│   │   ├── add.php                # Añadir usuario
+│   │   ├── edit.php               # Editar usuario
+│   │   └── delete.php             # Eliminar usuario
+│   │
+│   ├── ads/                       # Gestión de publicidad
+│   │   ├── index.php              # Listado de anuncios
+│   │   ├── add.php                # Añadir anuncio
+│   │   ├── edit.php               # Editar anuncio
+│   │   └── delete.php             # Eliminar anuncio
+│   │
+│   ├── media/                     # Biblioteca de medios
+│   │   ├── index.php              # Explorador de medios
+│   │   ├── upload.php             # Subir archivos
+│   │   └── delete.php             # Eliminar archivos
+│   │
+│   ├── polls/                     # Gestión de encuestas
+│   │   ├── index.php              # Listado de encuestas
+│   │   ├── add.php                # Añadir encuesta
+│   │   ├── edit.php               # Editar encuesta
+│   │   └── results.php            # Ver resultados
+│   │
+│   ├── subscribers/               # Gestión de suscriptores
+│   │   ├── index.php              # Listado de suscriptores
+│   │   ├── export.php             # Exportar suscriptores
+│   │   └── delete.php             # Eliminar suscriptores
+│   │
+│   ├── statistics/                # Estadísticas  
+│   │   ├── index.php              # Panel general
+│   │   ├── news.php               # Estadísticas por noticia
+│   │   ├── categories.php         # Estadísticas por categoría
+│   │   └── export.php             # Exportar estadísticas
+│   │
+│   ├── settings/                  # Configuración
+│   │   ├── api.php               
+│   │   ├── index.php              # Configuración general
+│   │   ├── site.php               # Configuración del sitio
+│   │   ├── social.php             # Redes sociales
+│   │   └── themes.php                # Configuración de APIs
+│   │
+│   ├── includes/                  # Includes del admin
+│   │   ├── header.php             # Encabezado del admin
+│   │   ├── footer.php             # Pie de página del admin
+│   │   ├── sidebar.php            # Menú lateral
+│   │   └── functions.php          # Funciones del admin
+│   │
+│   └── assets/                    # Recursos del admin
+│       ├── css/
+│       ├── js/
+│       └── img/
+├── db/
+│   └── schema.sql
+└── cache/                         # Directorio para caché (opcional)
