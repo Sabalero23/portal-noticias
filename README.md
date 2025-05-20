@@ -75,7 +75,7 @@
 
 ### 1. Clonar el Repositorio
 ```bash
-git clone https://github.com/usuario/portal-noticias.git
+git clone https://github.com/Sabalero23/portal-noticias.git
 cd portal-noticias
 ```
 
