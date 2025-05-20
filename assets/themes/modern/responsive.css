@@ -1,0 +1,243 @@
+/**
+ * Portal de Noticias - Estilos responsivos para el tema Modern
+ */
+
+/* 
+   Ajustes globales para eliminar scroll en columnas en todos los tamaños de pantalla 
+   Estos estilos tienen mayor prioridad
+*/
+.col-lg-3, .col-lg-6, .col-md-4, .col-md-8, .col-md-12,
+.sticky-sidebar, .card, .card-body, .sidebar-ads, .ad-container, 
+.list-group, .widget, .popular-news-item, #weather-widget, 
+.poll-result, .tags-cloud, .news-list, .content-wrapper, .main-content {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+}
+
+.sticky-sidebar {
+    position: relative !important;
+    top: auto !important;
+}
+
+/* Dispositivos extra pequeños (teléfonos, menos de 576px) */
+@media (max-width: 575.98px) {
+    /* Ajuste de columnas */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 250px;
+        border-radius: 8px;
+    }
+    
+    .carousel-caption {
+        padding: 1.5rem;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .category-badge {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+    
+    /* Noticias */
+    .news-item {
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+    }
+    
+    .news-item .card-body {
+        padding: 1rem;
+    }
+    
+    .news-item .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .news-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 0.75rem;
+    }
+    
+    .news-item .btn-primary {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Tarjetas */
+    .card {
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+    }
+    
+    .card-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .card-header h5 {
+        font-size: 1rem;
+    }
+    
+    /* Paginación */
+    .pagination {
+        margin-top: 1.5rem;
+    }
+    
+    .pagination .page-link {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+    
+    /* Botones de navegación */
+    .navbar-toggler {
+        padding: 0.5rem;
+    }
+    
+    /* Eliminar algunos efectos hover en móvil */
+    .card:hover, .news-item:hover {
+        transform: none;
+    }
+}
+
+/* Dispositivos pequeños (tablets verticales, 576px y más) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 300px;
+        border-radius: 8px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Mejoras para la navegación en tablet */
+    .navbar-collapse {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .navbar-dark .nav-link {
+        padding: 0.6rem 1rem;
+    }
+    
+    /* Mejoras para temas en este tamaño */
+    .newsletter-form .form-control {
+        font-size: 0.9rem;
+    }
+    
+    .news-item .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dispositivos medianos (tablets horizontales, 768px y más) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Layout */
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 350px;
+        border-radius: 10px;
+    }
+    
+    /* Mejoras para tablet horizontal */
+    .news-item .card-body {
+        padding: 1.25rem;
+    }
+    
+    .news-item .card-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Adaptación columnas sidebar */
+    .col-md-4 .sidebar-ads .ad-container {
+        width: 48%;
+        display: inline-block;
+        margin-right: 2%;
+        border-radius: 8px;
+    }
+    
+    .col-md-4 .sidebar-ads .ad-container img {
+        border-radius: 8px;
+    }
+}
+
+/* Dispositivos grandes (desktops, 992px y más) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Layout */
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 400px;
+        border-radius: 12px;
+    }
+    
+    /* Mejoras para tamaño desktop */
+    .news-item .card-title {
+        font-size: 1.3rem;
+    }
+    
+    /* Mejoras para sidebar */
+    .popular-news-item h6 {
+        font-size: 0.85rem;
+    }
+}
+
+/* Dispositivos extra grandes (desktops grandes, 1200px y más) */
+@media (min-width: 1200px) {
+    /* Layout */
+    .container {
+        max-width: 1280px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 450px;
+        border-radius: 15px;
+    }
+    
+    /* Mejoras para pantallas grandes */
+    .news-item .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    
+    /* Mejoras en la navegación */
+    .navbar-dark .nav-link {
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+/* Ajustes para orientación de pantalla en dispositivos móviles */
+@media screen and (orientation: landscape) and (max-width: 991.98px) {
+    /* Slider más pequeño en landscape */
+    .carousel-item {
+        height: 280px;
+    }
+    
+    /* Mejor uso del espacio en landscape */
+    .news-item .row {
+        display: flex;
+        align-items: center;
+    }
+}

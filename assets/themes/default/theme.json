@@ -1,0 +1,11 @@
+{
+  "name": "Default",
+  "description": "El tema predeterminado del portal de noticias con diseño limpio y clásico de 3 columnas.",
+  "version": "1.0",
+  "author": "Admin",
+  "authorUrl": "https://info@cellcomweb.com.ar",
+  "colors": {
+    "primary": "#0d6efd",
+    "secondary": "#6c757d"
+  }
+}

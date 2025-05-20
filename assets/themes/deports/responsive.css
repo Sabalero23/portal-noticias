@@ -1,0 +1,454 @@
+/**
+ * Tema Deportes - Estilos responsivos
+ */
+
+/* 
+   Ajustes globales para eliminar scroll en columnas en todos los tamaños de pantalla 
+   Estos estilos tienen mayor prioridad
+*/
+.col-lg-3, .col-lg-6, .col-md-4, .col-md-8, .col-md-12,
+.sticky-sidebar, .card, .card-body, .sidebar-ads, .ad-container, 
+.list-group, .widget, .popular-news-item, #weather-widget, 
+.poll-result, .tags-cloud, .news-list, .content-wrapper, .main-content {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+}
+
+.sticky-sidebar {
+    position: relative !important;
+    top: auto !important;
+}
+
+/* Dispositivos extra pequeños (teléfonos, menos de 576px) */
+@media (max-width: 575.98px) {
+    /* Ajustes para tema deportes en móvil */
+    body {
+        font-size: 0.9rem;
+        background-size: 100px;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Header y navegación */
+    .navbar-dark .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 200px;
+        border-radius: 3px;
+    }
+    
+    .carousel-caption {
+        padding: 1rem;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .carousel-caption p {
+        display: none;
+    }
+    
+    .category-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    /* Noticias */
+    .news-item {
+        margin-bottom: 1.5rem;
+        border-radius: 3px;
+    }
+    
+    .news-item .card-body {
+        padding: 1rem;
+    }
+    
+    .news-item .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .news-item .card-text {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .news-meta {
+        font-size: 0.7rem;
+        gap: 8px;
+    }
+    
+    .news-item .btn-primary {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Cards */
+    .card {
+        margin-bottom: 1.25rem;
+        border-radius: 3px;
+    }
+    
+    .card-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .card-header h5 {
+        font-size: 1.1rem;
+    }
+    
+    /* Elementos específicos de deportes */
+    .player-stats {
+        flex-wrap: wrap;
+    }
+    
+    .player-stat {
+        width: 33.333%;
+        margin-bottom: 10px;
+    }
+    
+    .match-result {
+        font-size: 1.2rem;
+    }
+    
+    .medal-count {
+        flex-direction: column;
+    }
+    
+    .medals {
+        margin-top: 5px;
+    }
+    
+    /* Tablas */
+    .standings-table th,
+    .standings-table td {
+        padding: 0.4rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Paginación */
+    .pagination {
+        margin-top: 1.5rem;
+    }
+    
+    .pagination .page-link {
+        padding: 0.3rem 0.6rem;
+        margin: 0 2px;
+    }
+}
+
+/* Dispositivos pequeños (tablets verticales, 576px y más) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Ajustes para tema deportes en tablets pequeñas */
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 250px;
+        border-radius: 4px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Noticias */
+    .news-item .card-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Ajustes visuales */
+    .card-header::after {
+        width: 20px;
+    }
+    
+    /* Ajustes de elementos deportivos */
+    .match-item {
+        flex-wrap: wrap;
+    }
+    
+    .match-teams {
+        width: 100%;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+    
+    .match-time {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Dispositivos medianos (tablets horizontales, 768px y más) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Ajustes para tema deportes en tablets */
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 300px;
+        border-radius: 5px;
+    }
+    
+    /* Layout de dos columnas */
+    .order-md-3 {
+        margin-top: 2rem;
+    }
+    
+    /* Adaptación de widgets */
+    .popular-news-item h6 {
+        font-size: 0.95rem;
+    }
+    
+    /* Estructura de tarjetas de resultados */
+    .match-item {
+        padding: 8px;
+    }
+    
+    /* Tablas de clasificación */
+    .standings-table th,
+    .standings-table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Flexbox más adaptable */
+    .player-stats {
+        flex-wrap: wrap;
+    }
+    
+    .player-stat {
+        width: 33.333%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Dispositivos grandes (desktops, 992px y más) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Ajustes para tema deportes en desktop */
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 350px;
+    }
+    
+    /* Layout de 3 columnas */
+    .col-lg-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Ajustes tipográficos */
+    .news-item .card-title {
+        font-size: 1.25rem;
+    }
+    
+    /* Animaciones solo en desktop */
+    .news-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .tag-link:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Mejoras en visualización de widgets */
+    .popular-news-item h6 {
+        font-size: 0.95rem;
+    }
+    
+    .weather-temp {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Dispositivos extra grandes (desktops grandes, 1200px y más) */
+@media (min-width: 1200px) {
+    /* Ajustes para tema deportes en pantallas grandes */
+    .container {
+        max-width: 1200px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 400px;
+    }
+    
+    /* Ajustes para tablas en pantallas grandes */
+    .standings-table th {
+        padding: 0.8rem 1rem;
+    }
+    
+    .standings-table td {
+        padding: 0.8rem 1rem;
+    }
+    
+    /* Estadísticas más grandes */
+    .stat-value {
+        font-size: 2.2rem;
+    }
+    
+    /* Efectos hover mejorados */
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .news-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Ajustes para orientación de pantalla en dispositivos móviles */
+@media screen and (orientation: landscape) and (max-width: 991.98px) {
+    /* Slider más pequeño en landscape */
+    .carousel-item {
+        height: 220px;
+    }
+    
+    /* Layout más compacto */
+    .news-item {
+        margin-bottom: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Layout para elementos deportivos */
+    .player-stats {
+        flex-wrap: nowrap;
+    }
+    
+    .match-item {
+        flex-wrap: nowrap;
+    }
+    
+    .match-teams {
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+
+/* Ajustes para PWA */
+@media (display-mode: standalone) {
+    /* Menú inferior para navegación en modo app */
+    .pwa-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--dark-color);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    
+    .pwa-nav a {
+        flex: 1;
+        text-align: center;
+        padding: 10px 0;
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    .pwa-nav a i {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+        color: var(--primary-color);
+    }
+    
+    .pwa-nav a.active {
+        color: var(--primary-color);
+    }
+}
+
+/* Ajustes para impresión */
+@media print {
+    body {
+        background-image: none !important;
+        color: #000 !important;
+    }
+    
+    .top-bar, .navbar, .sidebar-ads, .ad-container, .footer, 
+    .pagination, .btn, .weather-widget {
+        display: none !important;
+    }
+    
+    .card, .news-item {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .card-header {
+        background: #f5f5f5 !important;
+        color: #000 !important;
+        border-bottom: 1px solid #ddd !important;
+    }
+    
+    .card-header::after {
+        display: none !important;
+    }
+    
+    /* Tablas de clasificación */
+    .standings-table th {
+        background-color: #f0f0f0 !important;
+        color: #000 !important;
+    }
+    
+    .standings-table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+    }
+    
+    .standings-table td, 
+    .standings-table th {
+        border: 1px solid #ddd !important;
+    }
+    
+    .promotion-zone, .relegation-zone {
+        border-left: none !important;
+    }
+    
+    .promotion-zone td:first-child {
+        border-left: 4px solid #4caf50 !important;
+    }
+    
+    .relegation-zone td:first-child {
+        border-left: 4px solid #e63946 !important;
+    }
+    
+    /* Evitar que el contenido se corte */
+    .row, .container, .col-lg-3, .col-lg-6 {
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+    }
+}

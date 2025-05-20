@@ -1,0 +1,14 @@
+{
+  "name": "Modern",
+  "description": "Un tema moderno con diseño redondeado, colores vibrantes y efectos de interacción mejorados para una experiencia de usuario más atractiva.",
+  "version": "1.0",
+  "author": "Admin",
+  "authorUrl": "https://tucorreo.com",
+  "colors": {
+    "primary": "#8e44ad",
+    "secondary": "#3498db",
+    "accent": "#e74c3c",
+    "background": "#f5f7fa",
+    "text": "#34495e"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Deportes",
+  "description": "Tema dinámico diseñado para portales deportivos con elementos visuales energéticos, colores vibrantes y tipografía de impacto. Incluye características especiales para mostrar resultados y estadísticas.",
+  "version": "1.0",
+  "author": "Admin",
+  "authorUrl": "https://info@cellcomweb.com.ar",
+  "colors": {
+    "primary": "#e63946",
+    "secondary": "#1d3557",
+    "accent": "#4caf50",
+    "background": "#f8f9fa",
+    "text": "#1d3557"
+  }
+}

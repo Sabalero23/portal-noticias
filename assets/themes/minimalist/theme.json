@@ -1,0 +1,14 @@
+{
+  "name": "Minimalista",
+  "description": "Diseño limpio y minimalista con tipografía elegante y espacios en blanco para una lectura cómoda y sin distracciones.",
+  "version": "1.0",
+  "author": "Admin",
+  "authorUrl": "https://info@cellcomweb.com.ar",
+  "colors": {
+    "primary": "#333333",
+    "secondary": "#777777",
+    "accent": "#3498db",
+    "background": "#ffffff",
+    "text": "#333333"
+  }
+}

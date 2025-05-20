@@ -1,0 +1,13 @@
+{
+  "name": "Dark Mode",
+  "description": "Tema oscuro ideal para lecturas nocturnas o usuarios que prefieren interfaces de bajo contraste.",
+  "version": "1.0 ",
+  "author": "Admin",
+  "authorUrl": "https://info@cellcomweb.com.ar",
+  "colors": {
+    "primary": "#0d6efd",
+    "secondary": "#6c757d",
+    "background": "#1a1a1a",
+    "text": "#e0e0e0"
+  }
+}

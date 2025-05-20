@@ -1,0 +1,1253 @@
+/* Tema Tecnología - Estilos principales */
+:root {
+  --primary-color: #2962ff;
+  --secondary-color: #7c4dff;
+  --accent-color: #00e676;
+  --dark-color: #0d2137;
+  --light-color: #f5f7fb;
+  --text-color: #2c3e50;
+  --text-muted: #7f8c8d;
+  --border-color: #eaedf2;
+  --card-bg: #ffffff;
+  --body-bg: #eef2f7;
+  --header-bg: #0d2137;
+  --footer-bg: #0d2137;
+  --hover-bg: #f0f7ff;
+  --code-bg: #2d2d2d;
+  --code-color: #f8f8f2;
+}
+
+/* Tipografía tech */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  letter-spacing: -0.01rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Estructura general */
+.container {
+  max-width: 1300px;
+}
+
+/* Cabecera y navegación */
+.top-bar {
+  background: linear-gradient(90deg, var(--dark-color), #0f2b45) !important;
+  color: white !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar a, .top-bar a:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.site-header {
+  background-color: var(--dark-color);
+  position: relative;
+  padding: 1rem 0;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+}
+
+.navbar-dark {
+  background: #172b4d !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .nav-link {
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.navbar-dark .nav-link:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-dark .nav-link.active::after,
+.navbar-dark .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+/* Tarjetas y contenedores */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.card-header h5 {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+/* Slider / Carousel */
+.carousel-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption {
+  background: linear-gradient(to top, rgba(13, 33, 55, 0.8), rgba(13, 33, 55, 0));
+  padding: 2rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.carousel-caption h2 {
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+}
+
+.category-badge {
+  background-color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+/* Noticias */
+.news-item {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--card-bg);
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.news-item .card-title {
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.news-item .card-title a {
+  color: var(--dark-color);
+  transition: color 0.2s;
+}
+
+.news-item .card-title a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.news-item .category-label {
+  background-color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.news-meta i {
+  color: var(--primary-color);
+}
+
+.news-item .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  box-shadow: 0 2px 5px rgba(41, 98, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.news-item .btn-primary:hover {
+  background-color: #1a54ff;
+  border-color: #1a54ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(41, 98, 255, 0.4);
+}
+
+/* Paginación */
+.pagination {
+  margin-top: 2.5rem;
+}
+
+.pagination .page-link {
+  border: none;
+  margin: 0 3px;
+  border-radius: 6px;
+  color: var(--dark-color);
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 5px rgba(41, 98, 255, 0.3);
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: var(--hover-bg);
+  color: var(--primary-color);
+}
+
+/* Sidebar */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 0.85rem 1rem;
+  transition: all 0.2s;
+  border-color: var(--border-color);
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.list-group-item a {
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+
+.list-group-item a:hover {
+  color: var(--primary-color);
+}
+
+.badge.bg-primary {
+  background-color: var(--primary-color) !important;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* Populares */
+.popular-news-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.popular-news-item:hover {
+  transform: translateX(5px);
+}
+
+.popular-news-item:last-child {
+  border-bottom: none;
+}
+
+.popular-news-item h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.popular-news-item .thumbnail img {
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-link {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tag-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(41, 98, 255, 0.3);
+}
+
+/* Newsletter */
+.newsletter-form .form-control {
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.newsletter-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(41, 98, 255, 0.25);
+}
+
+.newsletter-form .btn {
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(41, 98, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.newsletter-form .btn:hover {
+  background-color: #1a54ff;
+  border-color: #1a54ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(41, 98, 255, 0.4);
+}
+
+/* Encuestas */
+.progress {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--light-color);
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Anuncios */
+.ad-container {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ad-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ad-container img {
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 3rem 0 1.5rem;
+  border-top: 3px solid var(--primary-color);
+  background-image: url('digital-grid.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-heading {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Botones */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(41, 98, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #1a54ff;
+  border-color: #1a54ff;
+  box-shadow: 0 5px 10px rgba(41, 98, 255, 0.4);
+}
+
+/* Formularios */
+.form-control, .form-select {
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(41, 98, 255, 0.25);
+}
+
+/* Elementos específicos de tecnología */
+
+/* Bloque de código */
+pre.code-block {
+  background-color: var(--code-bg);
+  color: var(--code-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--code-color);
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-code-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Colores de sintaxis */
+.code-keyword {
+  color: #ff79c6;
+}
+
+.code-string {
+  color: #f1fa8c;
+}
+
+.code-comment {
+  color: #6272a4;
+  font-style: italic;
+}
+
+.code-function {
+  color: #50fa7b;
+}
+
+.code-number {
+  color: #bd93f9;
+}
+
+/* Iconos tech */
+.tech-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: -5px;
+}
+
+/* Tarjetas de productos */
+.product-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  background-color: white;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+}
+
+.product-info {
+  padding: 1.25rem;
+}
+
+.product-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.product-specs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.product-rating i {
+  color: #ffc107;
+  margin-right: 2px;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.product-price .old-price {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-weight: normal;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+/* Tablas de especificaciones */
+.specs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+}
+
+.specs-table th,
+.specs-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.specs-table th {
+  background-color: var(--light-color);
+  font-weight: 600;
+  color: var(--dark-color);
+  text-align: left;
+}
+
+.specs-table tr:last-child td,
+.specs-table tr:last-child th {
+  border-bottom: none;
+}
+
+.specs-table tr:hover td {
+  background-color: var(--hover-bg);
+}
+
+/* Barras de progreso de comparación */
+.comparison-bar {
+  height: 8px;
+  background-color: var(--light-color);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 4px;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.bar-name {
+  font-weight: 500;
+}
+
+.bar-value {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Indicador de descuento */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+/* Clima */
+#weather-widget {
+  background: linear-gradient(135deg, var(--dark-color) 0%, #172b4d 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+#weather-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('tech-pattern.svg');
+  background-size: cover;
+  opacity: 0.1;
+}
+
+/* CSS para elementos tecnológicos adicionales */
+.device-specs {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-name {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.spec-value {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+/* Chips / Tags específicos */
+.tech-chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.chip-android {
+  background-color: #a4c639;
+  color: white;
+}
+
+.chip-ios {
+  background-color: #000000;
+  color: white;
+}
+
+.chip-windows {
+  background-color: #0078d7;
+  color: white;
+}
+
+.chip-mac {
+  background-color: #888;
+  color: white;
+}
+
+.chip-linux {
+  background-color: #f8c517;
+  color: #333;
+}
+
+/* Terminal */
+.terminal {
+  background-color: #1e1e1e;
+  color: #f8f8f8;
+  border-radius: 8px;
+  padding: 15px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 20px 0;
+}
+
+.terminal::before {
+  content: '● ● ●';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 15px;
+  background-color: #323232;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 5px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.terminal-content {
+  margin-top: 25px;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.prompt {
+  color: #71c055;
+}
+
+.command {
+  color: #f8f8f8;
+}
+
+.output {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* Animación para simular carga */
+.loading-dots::after {
+  content: '...';
+  animation: loading 1.5s infinite;
+  display: inline-block;
+  width: 20px;
+  text-align: left;
+}
+
+@keyframes loading {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
+}
+
+/* PWA Installation Banner - Tema Technology */
+.pwa-install-banner {
+    background: linear-gradient(135deg, rgba(13, 33, 55, 0.05) 0%, rgba(41, 98, 255, 0.02) 100%);
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--primary-color);
+    color: var(--text-color);
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    letter-spacing: -0.01rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.pwa-install-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    z-index: 1;
+}
+
+.pwa-install-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(41, 98, 255, 0.05), 
+        transparent
+    );
+    animation: techScan 4s infinite;
+}
+
+@keyframes techScan {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.pwa-install-banner .container {
+    padding: 1rem 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.pwa-install-banner span {
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pwa-install-banner strong {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+}
+
+.pwa-install-banner strong::before {
+    content: '<>';
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-right: 3px;
+}
+
+.pwa-install-banner strong::after {
+    content: '</>';
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+.pwa-install-banner .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a54ff 100%);
+    border: none;
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(41, 98, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.pwa-install-banner .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.pwa-install-banner .btn-primary:hover::before {
+    transform: translateX(100%);
+}
+
+.pwa-install-banner .btn-primary:hover {
+    background: linear-gradient(135deg, #1a54ff 0%, var(--dark-color) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(41, 98, 255, 0.4);
+}
+
+.pwa-install-banner .btn-close {
+    filter: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: all 0.2s;
+    backdrop-filter: blur(10px);
+}
+
+.pwa-install-banner .btn-close:hover {
+    opacity: 1;
+    background: rgba(41, 98, 255, 0.1);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.pwa-install-banner i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* Indicador tech en top-bar */
+.pwa-indicator-tech {
+    background: linear-gradient(90deg, var(--dark-color), #0f2b45);
+    color: var(--accent-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.pwa-indicator-tech::before {
+    content: '●';
+    color: var(--accent-color);
+    margin-right: 5px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+.pwa-indicator-tech i {
+    font-size: 0.6rem;
+    margin-left: 4px;
+}
+
+/* PWA instalada - clase para el body */
+.pwa-installed .pwa-install-banner,
+.pwa-installed .pwa-install-btn {
+    display: none !important;
+}
+
+/* Ocultar en PWA instalada */
+@media (display-mode: standalone) {
+    .pwa-install-banner,
+    .pwa-install-btn {
+        display: none !important;
+    }
+}
+
+/* Ocultar en iOS standalone */
+@supports (-webkit-touch-callout: none) {
+    @media (display-mode: standalone) {
+        .pwa-install-banner,
+        .pwa-install-btn {
+            display: none !important;
+        }
+    }
+}
+
+/* Animación tech futurista */
+.pwa-install-banner {
+    animation: slideInTech 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideInTech {
+    from {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.9);
+        filter: blur(5px);
+    }
+    50% {
+        transform: translateY(10%) scale(1.02);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Efecto matriz para el banner */
+.pwa-install-banner.matrix-effect {
+    position: relative;
+}
+
+.pwa-install-banner.matrix-effect::before {
+    content: '< APP />';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: var(--accent-color);
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.7rem;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Botón con efecto de circuito */
+.pwa-install-btn.circuit {
+    position: relative;
+}
+
+.pwa-install-btn.circuit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    animation: circuit 2s infinite;
+}
+
+@keyframes circuit {
+    0% { 
+        left: 10px;
+        opacity: 1;
+    }
+    50% { 
+        left: calc(100% - 14px);
+        opacity: 0.5;
+    }
+    100% { 
+        left: 10px;
+        opacity: 1;
+    }
+}
+
+/* Responsive design tech */
+@media (max-width: 768px) {
+    .pwa-install-banner .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 1rem 15px;
+    }
+    
+    .pwa-install-banner .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .pwa-install-banner span {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .pwa-install-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 1.2rem;
+        min-width: 120px;
+    }
+    
+    .pwa-install-banner i.fa-mobile-alt {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        display: block;
+    }
+    
+    .pwa-install-banner.matrix-effect::before {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .pwa-install-banner {
+        border-radius: 0;
+    }
+    
+    .pwa-install-banner .container {
+        padding: 0.75rem 10px;
+    }
+    
+    .pwa-install-banner span {
+        font-size: 0.8rem;
+    }
+    
+    .pwa-install-banner strong::before,
+    .pwa-install-banner strong::after {
+        display: none;
+    }
+    
+    .pwa-install-banner strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Estados avanzados tech */
+.pwa-install-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(41, 98, 255, 0.3);
+}
+
+.pwa-install-banner .btn-close:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.3);
+}
+
+/* Efecto hover tech para el banner */
+.pwa-install-banner:hover {
+    border-top-color: var(--secondary-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pwa-install-banner:hover::after {
+    animation-duration: 2s;
+}
+
+/* Modo específico para PWA instalada */
+.pwa-installed .tech-icon::after {
+    content: ' PWA';
+    color: var(--accent-color);
+    font-size: 0.6rem;
+    font-weight: 600;
+    vertical-align: super;
+}
+
+/* Debug info opcional */
+.pwa-debug-info {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(13, 33, 55, 0.9);
+    color: var(--accent-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.7rem;
+    display: none;
+    z-index: 9999;
+}
+
+.debug-mode .pwa-debug-info {
+    display: block;
+}
+
+/* Terminal style para notificaciones PWA */
+.pwa-notification {
+    background: linear-gradient(135deg, var(--code-bg) 0%, #1e1e1e 100%);
+    color: var(--code-color);
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.8rem;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    border-left: 3px solid var(--accent-color);
+}
+
+.pwa-notification::before {
+    content: '$ ';
+    color: var(--accent-color);
+}
+
+.pwa-notification.success::before {
+    content: '✓ ';
+}
+
+.pwa-notification.error::before {
+    content: '✗ ';
+    color: var(--accent-color);
+}

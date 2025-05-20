@@ -1,0 +1,16 @@
+{
+  "name": "Tecnología",
+  "description": "Tema moderno enfocado en tecnología con elementos visuales estilo software, bloques de código, especificaciones técnicas y gradientes azules. Perfecto para portales de noticias tecnológicas.",
+  "version": "1.0",
+  "author": "Admin",
+  "authorUrl": "https://info@cellcomweb.com.ar",
+  "colors": {
+    "primary": "#2962ff",
+    "secondary": "#7c4dff",
+    "accent": "#00e676",
+    "background": "#eef2f7",
+    "text": "#2c3e50",
+    "dark": "#0d2137",
+    "code": "#2d2d2d"
+  }
+}

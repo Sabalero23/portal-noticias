@@ -1,0 +1,600 @@
+/* Tema Minimalista - Estilos principales */
+:root {
+  --primary-color: #333333;
+  --secondary-color: #777777;
+  --accent-color: #3498db;
+  --dark-color: #222222;
+  --light-color: #f8f9fa;
+  --text-color: #333333;
+  --text-muted: #777777;
+  --border-color: #eeeeee;
+  --card-bg: #ffffff;
+  --body-bg: #ffffff;
+  --header-bg: #ffffff;
+  --footer-bg: #f9f9f9;
+}
+
+/* Tipografía minimalista */
+body {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  letter-spacing: -0.015rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Estructura general */
+.container {
+  max-width: 1200px;
+}
+
+/* Cabecera y navegación */
+.top-bar {
+  background-color: #ffffff !important;
+  color: var(--text-color) !important;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.top-bar a {
+  color: var(--text-color) !important;
+}
+
+.site-header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.navbar-dark {
+  background: var(--primary-color) !important;
+}
+
+.navbar-dark .nav-link {
+  font-weight: 500;
+  letter-spacing: 0;
+  padding: 0.8rem 1.2rem;
+}
+
+/* Tarjetas y contenedores */
+.card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.2s;
+  margin-bottom: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-header {
+  background-color: #ffffff;
+  border-bottom: none;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.card-header h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Slider / Carousel */
+.carousel-item {
+  border-radius: 0;
+}
+
+.carousel-caption {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  padding: 2rem;
+}
+
+.carousel-caption h2 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.category-badge {
+  background-color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  border-radius: 0;
+  padding: 5px 10px;
+}
+
+/* Noticias */
+.news-item {
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  box-shadow: none;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.news-item .card-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  letter-spacing: -0.01rem;
+}
+
+.news-item .category-label {
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  border-radius: 0;
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.news-meta i {
+  color: var(--accent-color);
+}
+
+.news-item .btn-primary {
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  padding: 0.4rem 1rem;
+}
+
+.news-item .btn-primary:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Paginación */
+.pagination {
+  margin-top: 3rem;
+}
+
+.pagination .page-link {
+  border: none;
+  margin: 0 5px;
+  border-radius: 0;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: var(--light-color);
+}
+
+/* Sidebar */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 0.75rem 0;
+  transition: all 0.2s;
+  border-color: var(--border-color);
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item:hover {
+  background-color: transparent;
+  padding-left: 0.5rem;
+}
+
+.list-group-item a {
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.list-group-item a:hover {
+  color: var(--accent-color);
+}
+
+.badge.bg-primary {
+  background-color: var(--accent-color) !important;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+/* Populares */
+.popular-news-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.popular-news-item:last-child {
+  border-bottom: none;
+}
+
+.popular-news-item h6 {
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.popular-news-item .thumbnail img {
+  border-radius: 0;
+}
+
+/* Etiquetas */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-link {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  padding: 5px 12px;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.tag-link:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Newsletter */
+.newsletter-form .form-control {
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  background-color: white;
+}
+
+.newsletter-form .btn {
+  border-radius: 0;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Encuestas */
+.progress {
+  height: 6px;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: var(--light-color);
+}
+
+.progress-bar {
+  background-color: var(--accent-color);
+}
+
+/* Anuncios */
+.ad-container {
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.2s;
+  margin-bottom: 2rem;
+}
+
+.ad-container:hover {
+  transform: translateY(-3px);
+}
+
+.ad-container img {
+  border-radius: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer a {
+  color: var(--primary-color);
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+.footer-heading {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+/* Botones */
+.btn {
+  border-radius: 0;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+}
+
+/* Formularios */
+.form-control, .form-select {
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+  border-color: var(--accent-color);
+}
+
+/* Clima */
+#weather-widget {
+  padding: 1.5rem;
+  background-color: var(--light-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Búsqueda */
+.input-group .form-control {
+  border-radius: 0;
+}
+
+.input-group .btn {
+  border-radius: 0;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+/* PWA Installation Banner - Tema Minimalista */
+.pwa-install-banner {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-top: 2px solid var(--accent-color);
+    color: var(--text-color);
+    border-radius: 0;
+    margin-bottom: 0;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    letter-spacing: -0.015rem;
+}
+
+.pwa-install-banner .container {
+    padding: 1rem 15px;
+}
+
+.pwa-install-banner span {
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.pwa-install-banner strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: -0.01rem;
+}
+
+.pwa-install-banner .btn-primary {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+.pwa-install-banner .btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    transform: none;
+    box-shadow: none;
+}
+
+.pwa-install-banner .btn-close {
+    filter: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    opacity: 0.6;
+    font-size: 0.8rem;
+    transition: opacity 0.2s;
+}
+
+.pwa-install-banner .btn-close:hover {
+    opacity: 1;
+    background: none;
+}
+
+.pwa-install-banner i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* PWA instalada - clase para el body */
+.pwa-installed .pwa-install-banner,
+.pwa-installed .pwa-install-btn {
+    display: none !important;
+}
+
+/* Ocultar en PWA instalada */
+@media (display-mode: standalone) {
+    .pwa-install-banner,
+    .pwa-install-btn {
+        display: none !important;
+    }
+}
+
+/* Ocultar en iOS standalone */
+@supports (-webkit-touch-callout: none) {
+    @media (display-mode: standalone) {
+        .pwa-install-banner,
+        .pwa-install-btn {
+            display: none !important;
+        }
+    }
+}
+
+/* Animación minimalista y sutil */
+.pwa-install-banner {
+    animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Indicador minimalista en top-bar */
+.pwa-indicator-minimal {
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.pwa-indicator-minimal i {
+    margin-right: 3px;
+    font-size: 0.7rem;
+}
+
+/* Responsive design minimalista */
+@media (max-width: 768px) {
+    .pwa-install-banner .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 0.75rem 15px;
+    }
+    
+    .pwa-install-banner .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .pwa-install-banner span {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .pwa-install-btn {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.8rem;
+        min-width: 100px;
+    }
+    
+    .pwa-install-banner i.fa-mobile-alt {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pwa-install-banner .container {
+        padding: 0.5rem 10px;
+    }
+    
+    .pwa-install-banner span {
+        font-size: 0.75rem;
+    }
+    
+    .pwa-install-banner strong {
+        display: block;
+        margin-bottom: 3px;
+    }
+}
+
+/* Estados focus accesibles */
+.pwa-install-btn:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.pwa-install-banner .btn-close:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Efecto hover sutil */
+.pwa-install-banner:hover {
+    border-top-color: var(--primary-color);
+    transition: border-color 0.2s ease;
+}
+
+/* Modo oscuro para el tema minimalista (si se implementa) */
+@media (prefers-color-scheme: dark) {
+    .theme-minimal .pwa-install-banner {
+        background-color: #1a1a1a;
+        border-color: #333333;
+        color: #ffffff;
+    }
+    
+    .theme-minimal .pwa-install-banner strong {
+        color: #ffffff;
+    }
+    
+    .theme-minimal .pwa-install-banner .btn-close {
+        filter: invert(1);
+    }
+}

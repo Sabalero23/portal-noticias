@@ -1,0 +1,553 @@
+/**
+ * Portal de Noticias - Estilos responsivos para diseño de 3 columnas
+ */
+
+/* 
+   Ajustes globales para eliminar scroll en columnas en todos los tamaños de pantalla 
+   Estos estilos tienen mayor prioridad
+*/
+.col-lg-3, .col-lg-6, .col-md-4, .col-md-8, .col-md-12,
+.sticky-sidebar, .card, .card-body, .sidebar-ads, .ad-container, 
+.list-group, .widget, .popular-news-item, #weather-widget, 
+.poll-result, .tags-cloud, .news-list, .content-wrapper, .main-content {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+}
+
+.sticky-sidebar {
+    position: relative !important;
+    top: auto !important;
+}
+
+/* Dispositivos extra pequeños (teléfonos, menos de 576px) */
+@media (max-width: 575.98px) {
+    /* Ajuste de columnas */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 250px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.1rem;
+    }
+    
+    .category-badge {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+    
+    /* Noticias */
+    .news-item .card-body {
+        padding: 0.75rem;
+    }
+    
+    .news-item .card-title {
+        font-size: 1rem;
+    }
+    
+    .news-item .card-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+    }
+    
+    .news-meta {
+        font-size: 0.7rem;
+    }
+    
+    .news-meta .author, .news-meta .date, .news-meta .comments {
+        margin-right: 5px;
+    }
+    
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Publicidad */
+    .ad-container {
+        margin-bottom: 1rem;
+    }
+    
+    /* Encabezados de las tarjetas de anuncios */
+    .sidebar-ads .card-header h5 {
+        font-size: 0.9rem;
+    }
+    
+    .sidebar-ads:last-of-type .card {
+        margin-bottom: 1rem;
+    }
+    
+    .sidebar-ads:last-of-type .ad-container {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Encuestas */
+    .poll-result {
+        margin-bottom: 8px;
+    }
+    
+    .progress {
+        height: 6px;
+    }
+    
+    /* Formularios */
+    .form-control {
+        font-size: 0.9rem;
+    }
+    
+    /* Paginación */
+    .pagination {
+        margin-top: 1.5rem;
+    }
+    
+    .page-link {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Ajuste de layout para columnas */
+    .order-3 .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajustes para las nuevas posiciones de anuncios */
+    .sidebar-ads .card-header {
+        padding: 0.75rem;
+    }
+    
+    .sidebar-ads .card-body {
+        padding: 0.5rem;
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    ..bottom-ads {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .bottom-ads-title {
+        font-size: 1.1rem;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+    
+    .bottom-ad-container {
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+    
+    .bottom-ads .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Dispositivos pequeños (tablets verticales, 576px y más) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Layout */
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Noticias */
+    .news-item .card-body {
+        padding: 1rem;
+    }
+    
+    .news-item .card-title {
+        font-size: 1.1rem;
+    }
+    
+    /* Ajuste de layout para columnas */
+    .order-3 {
+        margin-top: 1.5rem;
+    }
+    
+    /* Ajustes para las nuevas posiciones de anuncios */
+    .sidebar-ads .card-header h5 {
+        font-size: 0.95rem;
+    }
+    
+    .sidebar-ads:last-of-type .ad-container {
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    .bottom-ad-container {
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+    
+    .bottom-ads .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Dispositivos medianos (tablets horizontales, 768px y más) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Layout */
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 350px;
+    }
+    
+    /* Diseño 2 columnas para tablets */
+    .order-md-1 {
+        order: 1 !important;
+    }
+    
+    .order-md-2 {
+        order: 2 !important;
+    }
+    
+    .order-md-3 {
+        order: 3 !important;
+        margin-top: 1.5rem;
+    }
+    
+    /* Columnas laterales en tablets */
+    .col-md-4 .sidebar-ads .ad-container {
+        width: 48%;
+        display: inline-block;
+        margin-right: 2%;
+    }
+    
+    .col-md-4 .sidebar-ads .ad-container:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    /* Columna de publicidad derecha en modo tablet */
+    .order-md-3 .card {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 2%;
+    }
+    
+    .order-md-3 .card:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    /* Ajustes para las nuevas posiciones de anuncios */
+    .sidebar-ads:last-of-type .card-body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .sidebar-ads:last-of-type .ad-container {
+        width: 48%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Asegurar que los widgets de clima y encuestas se muestren correctamente */
+    #weather-widget {
+        min-height: auto;
+        padding: 1rem 0;
+    }
+    
+    .poll-form-ajax {
+        padding: 0.5rem;
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    .bottom-ad-container {
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+    
+    .bottom-ads .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Dispositivos grandes (desktops, 992px y más) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Layout */
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 400px;
+    }
+    
+    /* Adaptación al diseño de 3 columnas */
+    .col-lg-3 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    
+    .col-lg-6 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    /* Ajustes para publicidad */
+    .sidebar-ads img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Widgets de barra lateral */
+    .popular-news-item h6 {
+        font-size: 0.85rem;
+    }
+    
+    .popular-news-item .thumbnail img {
+        width: 70px;
+        height: 50px;
+    }
+    
+    /* Formularios en barra lateral */
+    .card .form-control {
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustes para las nuevas posiciones de anuncios */
+    .sidebar-ads:last-of-type .card-header h5 {
+        font-size: 0.95rem;
+    }
+    
+    .sidebar-ads:last-of-type .ad-container {
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Acomodo de anuncios para optimizar espacio */
+    .sidebar-ads .card-body {
+        padding: 0.75rem;
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    .bottom-ads {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .bottom-ad-container {
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+    
+    .bottom-ads .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Dispositivos extra grandes (desktops grandes, 1200px y más) */
+@media (min-width: 1200px) {
+    /* Layout */
+    .container {
+        max-width: 1280px;
+    }
+    
+    /* Slider/Carousel */
+    .carousel-item {
+        height: 450px;
+    }
+    
+    /* Imagen de noticias */
+    .news-item .col-md-4 img {
+        height: 100%;
+        max-height: 200px;
+    }
+    
+    /* Ajustes para las nuevas posiciones de anuncios */
+    .sidebar-ads:last-of-type .card {
+        transition: transform 0.3s;
+    }
+    
+    .sidebar-ads:last-of-type .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    .bottom-ads {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+    
+    .bottom-ad-container {
+        width: 22%;
+        margin: 0 1.5% 1.5rem;
+    }
+    
+    .bottom-ads .d-flex {
+        flex-wrap: wrap;
+        margin: 0;
+        justify-content: center;
+    }
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    /* Ajustes para las columnas en pantallas muy grandes */
+    .col-lg-3 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Aumentar tamaño de anuncios en pantallas muy grandes */
+    .sidebar-ads .ad-container {
+        margin-bottom: 1.25rem;
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    .bottom-ad-container {
+        width: 20%;
+        margin: 0 2% 1.5rem;
+    }
+}
+
+/* Ajustes para orientación de pantalla en dispositivos móviles */
+@media screen and (orientation: portrait) and (max-width: 991.98px) {
+    /* Cambio a diseño vertical */
+    .order-md-1, .order-md-2, .order-md-3 {
+        width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 991.98px) {
+    /* Ajustes para modo landscape en móviles */
+    .carousel-item {
+        height: 300px;
+    }
+    
+    /* Layout más compacto */
+    .news-item {
+        margin-bottom: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajuste de anuncios en modo landscape */
+    .sidebar-ads {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .sidebar-ads .card {
+        width: 49%;
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajustes para anuncios después de paginación - mismo estilo que contenido */
+    .bottom-ads {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .bottom-ad-container {
+        width: 23%;
+        margin: 0 1% 1rem;
+    }
+}
+
+/* PWA específico */
+@media (display-mode: standalone) {
+    /* Ocultar elementos innecesarios en modo app */
+    .top-bar {
+        display: none;
+    }
+    
+    /* Ajustar alturas para modo app */
+    .content {
+        min-height: calc(100vh - 120px);
+    }
+    
+    /* Menú inferior para navegación en modo app */
+    .pwa-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .pwa-nav a {
+        flex: 1;
+        text-align: center;
+        padding: 10px 0;
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+    
+    .pwa-nav a i {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+    }
+    
+    .pwa-nav a.active {
+        color: var(--primary-color);
+    }
+    
+    /* Ajustes adicionales para anuncios en modo PWA */
+    .pwa-nav ~ .sidebar-ads {
+        margin-bottom: 70px;
+    }
+    
+    /* Anuncios después de paginación en modo PWA */
+    .pwa-nav ~ .bottom-ads {
+        margin-bottom: 80px !important;
+    }
+}
+
+/* Ajustes para impresión */
+@media print {
+    .ad-container, .sidebar-ads, .top-bar, .navbar, .footer, .pwa-nav, .bottom-ads {
+        display: none !important;
+    }
+    
+    .container, .row, .col-lg-3, .col-lg-6, .col-md-4, .col-md-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    
+    .news-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .news-meta, .pagination {
+        display: none !important;
+    }
+}
